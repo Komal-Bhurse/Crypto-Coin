@@ -90,7 +90,7 @@ function Carousel() {
             className="mySwiper"
           >
             {/* there are 10 objects inside this coins array that we are mapping */}
-           {console.log(coins.map((e,index)=>{
+           {console.log(coins?.map((e,index)=>{
             return e;
            }))}
             {coins?coins.map((e, index) => {
