@@ -41,7 +41,7 @@ function CoinsTable() {
        // we set the true value to the loader before fetching the data
     setLoader(true);
     const { data } = await axios.get(
-      `api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h`
+      `/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h`
     );
     setCoins(data);
     // after fetching the data we set the value false to the loader
@@ -165,7 +165,7 @@ function CoinsTable() {
                 //  we have 100 coins that we devide into 10 pages 
                 newCoin
                   ?newCoin.slice((page - 1) * 10, (page - 1) * 10 + 10)
-                  .map((e, key) => {
+                  ?.map((e, key) => {
                     // calculate the Profit
                     const profit = e.price_change_percentage_24h >= 0;
                     return (
