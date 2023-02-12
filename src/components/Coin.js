@@ -20,7 +20,7 @@ function Coin() {
     // we set the true value to the loader before fetching the data
     setLoader(true);
     const { data } = await axios.get(
-      `/api/v3/coins/${params.id}`
+      `https://api.coingecko.com/api/v3/coins/${params.id}`
     );
     setCoin(data);
     // after fetching the data we set the value false to the loader

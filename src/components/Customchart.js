@@ -40,7 +40,7 @@ function Customchart(props) {
     try {
 
       const { data } = await axios.get(
-        `/api/v3/coins/${props.id}/market_chart?vs_currency=${currency}&days=${days}`
+        `https://api.coingecko.com/api/v3/coins/${props.id}/market_chart?vs_currency=${currency}&days=${days}`
       );
       setHistocData(data.prices);
 
