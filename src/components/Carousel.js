@@ -94,7 +94,7 @@ function Carousel() {
            {console.log(coins?coins.map((e,index)=>{
             return index,e;
            }):"somthing went wrong")}
-            {coins?coins.map((e, index) => {
+            {coins?coins?.map((e, index) => {
               // calculating the profit 
               const profit = e.price_change_percentage_24h >= 0;
               const slide = (
