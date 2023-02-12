@@ -93,7 +93,7 @@ function Carousel() {
            {console.log(coins.map((e,index)=>{
             return e;
            }))}
-            {coins && coins.map((e, index) => {
+            {coins?coins.map((e, index) => {
               // calculating the profit 
               const profit = e.price_change_percentage_24h >= 0;
               const slide = (
@@ -131,7 +131,7 @@ function Carousel() {
                 </SwiperSlide>
               );
               return slide;
-            })}
+            }):<p>somthing went wrong in fetching data</p>}
           </Swiper>
         </>
       )}

@@ -164,8 +164,8 @@ function CoinsTable() {
                 // if newCoin is not empty then slice it according to pageno and map it 
                 //  we have 100 coins that we devide into 10 pages 
                 newCoin
-                  ?.slice((page - 1) * 10, (page - 1) * 10 + 10)
-                  ?.map((e, key) => {
+                  ?newCoin.slice((page - 1) * 10, (page - 1) * 10 + 10)
+                  .map((e, key) => {
                     // calculate the Profit
                     const profit = e.price_change_percentage_24h >= 0;
                     return (
@@ -217,7 +217,7 @@ function CoinsTable() {
                         </td>
                       </tr>
                     );
-                  })
+                  }):<p>somthing went wrong</p>
               )}
             </tbody>
           </table>
