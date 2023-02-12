@@ -118,7 +118,8 @@ function CoinsTable() {
     }
     
   }
-  
+  console.log("coinstable" + newCoin);
+  console.log("coinstable"+ newCoin);
   if(error) return <p>somthing went wrong</p>;
 
   return (

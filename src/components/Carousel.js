@@ -39,6 +39,7 @@ function Carousel() {
         setError(true);
       }
     };
+    console.log("carosel"+ coins);
  
   // in this useEffect hook, call the fetchTop10Coins function when the currency will change.
   useEffect(() => {
@@ -49,7 +50,7 @@ function Carousel() {
   const numberWithCommas = (x) => {
     return x.toLocaleString();
   };
-
+ console.log( "carosel error"+ error);
   if(error) return <p>somthing went wrong</p>;
   
   return (
