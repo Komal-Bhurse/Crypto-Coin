@@ -29,7 +29,7 @@ function Carousel() {
         // we set the true value to the loader before fetching the data 
     setLoader(true);
     const { data } = await axios.get(
-      `/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h`
+      `api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h`
     );
     setCoins(data);
     // after fetching the data we set the value false to the loader
@@ -39,7 +39,7 @@ function Carousel() {
         setError(true);
       }
     };
-    console.log("carosel"+ coins);
+    
  
   // in this useEffect hook, call the fetchTop10Coins function when the currency will change.
   useEffect(() => {
@@ -50,7 +50,7 @@ function Carousel() {
   const numberWithCommas = (x) => {
     return x.toLocaleString();
   };
- console.log( "carosel error"+ error);
+ 
   if(error) return <p>somthing went wrong</p>;
   
   return (

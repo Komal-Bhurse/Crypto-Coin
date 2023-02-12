@@ -41,7 +41,7 @@ function CoinsTable() {
        // we set the true value to the loader before fetching the data
     setLoader(true);
     const { data } = await axios.get(
-      `/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h`
+      `api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h`
     );
     setCoins(data);
     // after fetching the data we set the value false to the loader
@@ -118,8 +118,7 @@ function CoinsTable() {
     }
     
   }
-  console.log("coinstable" + newCoin);
-  console.log("coinstable"+ newCoin);
+  
   if(error) return <p>somthing went wrong</p>;
 
   return (
