@@ -165,7 +165,7 @@ function CoinsTable() {
                 //  we have 100 coins that we devide into 10 pages 
                 newCoin
                   ?.slice((page - 1) * 10, (page - 1) * 10 + 10)
-                  .map((e, key) => {
+                  ?.map((e, key) => {
                     // calculate the Profit
                     const profit = e.price_change_percentage_24h >= 0;
                     return (
@@ -223,7 +223,7 @@ function CoinsTable() {
           </table>
           <div className="flex-wrap mt-3 p-5 text-[#EEBC1D] flex justify-center">
             {/* pagination */}
-            {pagination.map((pageNo, index) => {
+            {pagination?.map((pageNo, index) => {
               // if the newCoin contains below the 10 coin then hidden the pagination
               const hidden = newCoin.length < 10 ? "hidden" : "";
               return (
