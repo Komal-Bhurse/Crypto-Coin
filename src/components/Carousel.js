@@ -90,6 +90,9 @@ function Carousel() {
             className="mySwiper"
           >
             {/* there are 10 objects inside this coins array that we are mapping */}
+           {console.log(coins.map((e,index)=>{
+            return e;
+           }))}
             {coins?.map((e, index) => {
               // calculating the profit 
               const profit = e.price_change_percentage_24h >= 0;
